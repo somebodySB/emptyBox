@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+
+
+.parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 160%;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.trans{
+  position:relative;
+  left: -20%;
+  top: -10%;
+  width: 600%;
+  height: 200%;
+  background-size:cover;
+  background-repeat:no-repeat;
+  transform: translate3d(0,0,0);
+  transition: 0.45s;
+  background-image: url(/images/test_background.jpeg);
+  background-size: cover;
+  transition-timing-function:ease-in-out;
+  -webkit-backface-visibility:hidden;
+  opacity: 1;
+}
+
+img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#bg{
+  position: absolute;
+  left: 0;
+  top: 0%;
+  width: 500%;
+  height: 200%;
+  background-image: url("/images/test_background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s;
+  transition-timing-function:ease-in-out;
+}
+
+.container {
+    /* 滚动容器 */
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    perspective: 0;
+}
+
+.polygon{
+  position: absolute;
+  width: 16.7%;
+  height: 50%;
+}
+
+#first{
+  left:3.33%;
+  top: 5%;
+}
+
+#second{
+  left:33.3%;
+  top: 27.5%;
+}
+
+#third{
+  left:16.67%;
+  top: 40%;
+}
+
+#forth{
+  left:56.67%;
+  top: 5%;
+}
+
+#fifth{
+  left:63.33%;
+  top: 50%;
+}
+
+#sixth{
+  left:80%;
+  top: 5%;
+}
+
+
+
+
+html, body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color:#000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-questionnaire {
+  width: 100%;
+  height: 100%;
+}
+
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* background: #fff; */
+  overflow:hidden;
+}

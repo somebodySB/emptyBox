@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" name="viewport" />
+    <link rel="prefetch" href="test"/>
+    <link rel="prefetch" href="/images/1.png"/>
+    <link rel="prefetch" href="/images/2.png"/>
+    <link rel="prefetch" href="/images/3.png"/>
+    <link rel="prefetch" href="/images/4.png"/>
+    <link rel="prefetch" href="/images/5.png"/>
+    <link rel="prefetch" href="/images/6.png"/>
+    <link rel="prefetch" href="/images/test_background.jpeg"/>
+    <link rel="prefetch" href="/images/yyy.gif"/>
+    <link rel="prefetch" href="/images/bt_enter_clicked.png"/>
+    <link rel="stylesheet" href="/stylesheets/home.css" />
+    <title>空箱情报所</title>
+  </head>
+  <body>
+    <!-- <div id="loadingDiv">
+      <img src="/images/loading.png"></img>
+    </div> -->
+    <div id="homeImg">
+      <img src="/images/home.png"></img>
+    </div>
+    <div id="enterButton">
+      <button ontouchstart = "change_img()" ontouchend = "getIntoMain()" onclick="getIntoMain()">
+        <img src="/images/bt_enter.png" id = "img_enter"></img>
+      </button>
+    </div>
+
+  </body>
+
+  <script>
+  function loading(){
+    // var resources = [];
+    // var nb_loaded = 0;
+    // var image = new Image();
+    // image.onLoad = function(){
+    //
+    // }
+  }
+  function getIntoMain(){
+
+    window.location.href='test';
+  }
+  function change_img(){
+    var img = document.getElementById("img_enter");;
+    img.src = "/images/bt_enter_clicked.png";
+  }
+  </script>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" name="viewport" />
+    <link rel="stylesheet" href="/stylesheets/mySwiper.css" />
+    <link rel="stylesheet" href="/stylesheets/swiper/dist/css/swiper.min.css" />
+    <script src="/javascripts/polygonTrans.js"></script>
+    <script src="/javascripts/moveMotion.js"></script>
+    <title>空箱情报所</title>
+  </head>
+  <body style="background-color:rgb(200,200,200)" >
+
+<div class="swiper-container">
+  <div class="parallax-bg" data-swiper-parallax="-30%"></div>
+    <div class="swiper-wrapper" >
+      <div class="swiper-slide" data-swiper-parallax="-30%">
+        <h1>这是标题</h1>
+      </div>
+      <div class="swiper-slide" data-swiper-parallax="-30%">
+        <!-- <div id="bg"></div> -->
+        <button onclick="polygonPos.next()" style="z-index:9999;position:absolute;right: 0%; top:50%;">next</button>
+        <button onclick="polygonPos.last()" style="z-index:9999;position:absolute;left: 0%; top:50%;">last</button>
+        <div class="trans" id="transl" >
+
+          <div id="first" class="polygon">
+            <div style="position:relative; top:13%; left:15%; width:70%; height:51%;">
+              <img src="/images/1.png"></img>
+            </div>
+          </div>
+
+          <div id="second" class="polygon">
+            <div style="position:relative; top:13%; left:15%; width:70%; height:51%;">
+              <img src="/images/2.png"></img>
+            </div>
+          </div>
+
+          <div id="third" class="polygon">
+            <div style="position:relative; top:13%; left:15%; width:70%; height:51%;">
+              <img src="/images/3.png"></img>
+            </div>
+          </div>
+
+          <div id="forth" class="polygon">
+            <div style="position:relative; top:13%; left:15%; width:70%; height:51%;">
+              <img src="/images/4.png"></img>
+            </div>
+          </div>
+
+          <div id="fifth" class="polygon">
+            <div style="position:relative; top:13%; left:15%; width:70%; height:51%;">
+              <img src="/images/5.png"></img>
+            </div>
+          </div>
+
+          <div id="sixth" class="polygon">
+            <div style="position:relative; top:13%; left:15%; width:70%; height:51%;">
+              <img src="/images/6.png"></img>
+            </div>
+          </div>
+
+        </div>
+     </div>
+      <div class="swiper-slide" id = "touch" data-swiper-parallax="-30%">
+        <form action="/question" method="post">
+          输入你的名字：
+          <input type="text" name = "name"></input>
+          <input type="submit" value = "确认"></input>
+        </form>
+
+
+      </div>
+    </div>
+</div>
+
+
+
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="/stylesheets/swiper/dist/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container',{
+    direction : 'vertical',
+    allowSlidePrev : false,
+    parallax : true,
+  });
+
+    </script>
+  </body>
+</html>

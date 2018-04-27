@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><%= title%></title>
+    <meta content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" name="viewport" />
+    <link rel="stylesheet" href="/stylesheets/mySwiper.css" />
+    <link rel="stylesheet" href="/stylesheets/swiper/dist/css/swiper.min.css" />
+    <script src="/javascripts/polygonTrans.js"></script>
+    <script src="/javascripts/moveMotion.js"></script>
+  </head>
+  <body onload="init()">
+    <div class = "swiper-questionnaire">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <form id = "1stQ">
+            <h1>1.如果有一整个空闲的周日，你会怎么安排？</h1>
+            <input type="radio" name="fisrt" value="100" onclick="nextQusetion()">A.没有任何安排，随性就好</input></br>
+            <input type="radio" name="fisrt" value="30" onclick="nextQusetion()">B.会规划几件简单的事情，完成之后就随性度过</input></br>
+            <input type="radio" name="fisrt" value="10" onclick="nextQusetion()">C.会认真安排规划，尽量不浪费时间</input>
+          </form>
+        </div>
+        <div class="swiper-slide">
+          <form id = "2ndQ">
+            <h1>2.你能够想象到多远后的自己？</h1>
+            <input type="radio" name="second" value="100" onclick="nextQusetion()">A.一周之后</input></br>
+            <input type="radio" name="second" value="30" onclick="nextQusetion()">B.一个月后</input></br>
+            <input type="radio" name="second" value="10" onclick="nextQusetion()">C.一年之后</input>
+          </form>
+        </div>
+        <div class="swiper-slide">
+          <form id = "3rdQ">
+            <h1>3.朋友圈有人习惯性发布负能量动态，你会觉得？</h1>
+            <input type="radio" name="third" value="10" onclick="nextQusetion()">A.人之常情，这也是一种发泄方式</input></br>
+            <input type="radio" name="third" value="30" onclick="nextQusetion()">B.会影响自己的心情</input></br>
+            <input type="radio" name="third" value="100" onclick="nextQusetion()">C.想要去屏蔽ta</input>
+          </form>
+        </div>
+        <div class="swiper-slide">
+          <form id = "4thQ">
+            <h1>4.你更会？</h1>
+            <input type="radio" name="forth" value="100" onclick="nextQusetion()">A.关注身边人的动向</input></br>
+            <input type="radio" name="forth" value="30" onclick="nextQusetion()">B.关注自己爱豆或喜欢的人的动向</input></br>
+            <input type="radio" name="forth" value="10" onclick="nextQusetion()">C.不是很关心别人的动向</input>
+          </form>
+        </div>
+        <div class="swiper-slide">
+          <form id = "5thQ">
+            <h1>5.截止日期快到的时候，你会？</h1>
+            <input type="radio" name="fifth" value="10" onclick="nextQusetion()">A.能做多少算多少</input></br>
+            <input type="radio" name="fifth" value="30" onclick="nextQusetion()">B.有紧迫感，赶紧开始规划进度表</input></br>
+            <input type="radio" name="fifth" value="100" onclick="nextQusetion()">C.没有办法专注于此</input>
+          </form>
+        </div>
+        <div class="swiper-slide">
+          <form id = "6thQ">
+            <h1>6.走在路上遇见不太熟悉的人？</h1>
+            <input type="radio" name="sixth" value="100" onclick="nextQusetion()">A.尽量避免迎面撞见的可能</input></br>
+            <input type="radio" name="sixth" value="30" onclick="nextQusetion()">B.如果对方主动打招呼就会热情回应</input></br>
+            <input type="radio" name="sixth" value="10" onclick="nextQusetion()">C.会主动Say嗨</input>
+          </form>
+        </div>
+        <div class="swiper-slide">
+          <form id = "7thQ">
+            <h1>7.对于“同学会”这类聚会的态度？</h1>
+            <input type="radio" name="seventh" value="10" onclick="nextQusetion();shakeStart();">A.会主动组织联系</input></br>
+            <input type="radio" name="seventh" value="30" onclick="nextQusetion();shakeStart();">B.如果有人想组织好，会愿意参加</input></br>
+            <input type="radio" name="seventh" value="100" onclick="nextQusetion();shakeStart();">C.不是很想参加</input>
+          </form>
+        </div>
+        <div class="swiper-slide" id = "shake">
+
+          <button onclick="submitQuestion()"></button>
+          请摇晃手机！
+          <img src = "/images/yyy.gif"></img>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+  function init(){
+    questionList.push(document.getElementById("1stQ"));
+    questionList.push(document.getElementById("2ndQ"));
+    questionList.push(document.getElementById("3rdQ"));
+    questionList.push(document.getElementById("4thQ"));
+    questionList.push(document.getElementById("5thQ"));
+    questionList.push(document.getElementById("6thQ"));
+    questionList.push(document.getElementById("7thQ"));
+  }
+  </script>
+  <!-- Swiper JS -->
+  <script src="/stylesheets/swiper/dist/js/swiper.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+  var swiper_questionnaire = new Swiper(".swiper-questionnaire",{});
+  </script>
+
+  <script>
+  testeeName = "<%= locals.name %>";
+  </script>
+</html>

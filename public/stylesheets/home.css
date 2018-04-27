@@ -1,0 +1,46 @@
+#homeImg{
+  background-color: black;
+  position: relative;
+  left: 6.66%;
+  width: 86.6%;
+  height: 74%;
+}
+
+#enterButton{
+  background-color: black;
+  width: 100%;
+  position: relative;
+  align-items: center;
+}
+
+#loadingDiv{
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+html, body{
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+button{
+  position: relative;
+  background-color: black;
+  left: 11.8%;
+  top: 0%;
+  width: 76.3%;
+  border: 0;
+  outline: none;
+}
+
+img{
+  position: relative;
+  width: 100%;
+
+}
