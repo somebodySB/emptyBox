@@ -1,10 +1,38 @@
-#homeImg{
+#homeImgDiv{
   background-color: black;
   position: relative;
   left: 6.66%;
   width: 86.6%;
   height: 74%;
 }
+
+#homeImg{
+  position: relative;
+  width: 100%;
+}
+
+Img{
+  position: relative;
+  width: 100%;
+}
+
+#loadImg{
+  position: relative;
+  width: 43.73%;
+  left: 28.13%;
+  top:10.26%;
+}
+progress{
+  position: absolute;
+  background: black;
+  width: 43.73%;
+  height: 0.9%;
+  left: 28.13%;
+  top: 43%;
+}
+progress::-webkit-progress-inner-element { border-radius: 8px; background: red;}
+progress::-webkit-progress-value { border-radius: 8px; background: #30f6ee;}
+progress::-webkit-progress-bar { border-radius: 8px; background: -webkit-gradient(linear, left 0,right 0, from(#ff528D), to(#ffff33));}
 
 #enterButton{
   background-color: black;
@@ -37,10 +65,4 @@ button{
   width: 76.3%;
   border: 0;
   outline: none;
-}
-
-img{
-  position: relative;
-  width: 100%;
-
 }

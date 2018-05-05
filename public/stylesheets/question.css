@@ -1,0 +1,264 @@
+form{
+  background-image: url("/images/question_background.png");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.q1s1{
+  position: absolute;
+  left: 8.9%;
+  top:41.3%;
+  width: 51.1%;
+  height: 8.0%;
+}
+
+.q1s2{
+  position: absolute;
+  left: 8.7%;
+  top: 52.9%;
+  width: 68.6%;
+  height: 8.0%;
+}
+
+.q1s3{
+  position: absolute;
+  left: 8.7%;
+  top: 64.5%;
+  width: 73.9%;
+  height: 8.0%;
+}
+
+.q1{
+  position: relative;
+  left:2.5%;
+  top:2.2%;
+  width:94.6%;
+  height:92.7%;
+  background-image: url("/images/q1.png");
+  background-size: cover;
+}
+
+.q2s1{
+  position: absolute;
+  left: 16.4%;
+  top:41.3%;
+  width: 27.7%;
+  height: 8.0%;
+}
+
+.q2s2{
+  position: absolute;
+  left: 30.3%;
+  top: 52.9%;
+  width: 27.7%;
+  height: 8.0%;
+}
+
+.q2s3{
+  position: absolute;
+  left: 48.8%;
+  top: 64.5%;
+  width: 27.7%;
+  height: 8.0%;
+}
+
+.q2{
+  position: relative;
+  left:2.5%;
+  top:2.2%;
+  width:94.6%;
+  height:92.7%;
+  background-image: url("/images/q2.png");
+  background-size: cover;
+}
+
+.q3s1{
+  position: absolute;
+  left: 8.7%;
+  top:41.3%;
+  width: 49.1%;
+  height: 8.0%;
+}
+
+.q3s2{
+  position: absolute;
+  left: 19.5%;
+  top: 52.9%;
+  width: 60%;
+  height: 8.0%;
+}
+
+.q3s3{
+  position: absolute;
+  left: 9.2%;
+  top: 64.5%;
+  width: 60%;
+  height: 8.0%;
+}
+
+.q3{
+  position: relative;
+  left:2.5%;
+  top:2.2%;
+  width:94.6%;
+  height:92.7%;
+  background-image: url("/images/q3.png");
+  background-size: cover;
+}
+
+.q4s1{
+  position: absolute;
+  right: 14.5%;
+  top:41.3%;
+  width: 45.7%;
+  height: 8.0%;
+}
+
+.q4s2{
+  position: absolute;
+  right: 14.5%;
+  top: 52.9%;
+  width: 67.5%;
+  height: 8.0%;
+}
+
+.q4s3{
+  position: absolute;
+  right: 14.5%;
+  top: 64.5%;
+  width: 47.6%;
+  height: 8.0%;
+}
+
+.q4{
+  position: relative;
+  left:2.5%;
+  top:2.2%;
+  width:94.6%;
+  height:92.7%;
+  background-image: url("/images/q4.png");
+  background-size: cover;
+}
+
+.q5s1{
+  position: absolute;
+  right: 12.7%;
+  top:41.3%;
+  width: 72.8%;
+  height: 8.0%;
+}
+
+.q5s2{
+  position: absolute;
+  right: 12.7%;
+  top: 52.9%;
+  width: 70.1%;
+  height: 8.0%;
+}
+
+.q5s3{
+  position: absolute;
+  right: 12.7%;
+  top: 64.5%;
+  width: 75.7%;
+  height: 8.0%;
+}
+
+.q5{
+  position: relative;
+  left:2.5%;
+  top:2.2%;
+  width:94.6%;
+  height:92.7%;
+  background-image: url("/images/q5.png");
+  background-size: cover;
+}
+
+.q6s1{
+  position: absolute;
+  left: 8.9%;
+  top:41.3%;
+  width: 52.5%;
+  height: 8.0%;
+}
+
+.q6s2{
+  position: absolute;
+  left: 8.8%;
+  top: 52.9%;
+  width: 72%;
+  height: 8.0%;
+}
+
+.q6s3{
+  position: absolute;
+  left: 8.8%;
+  top: 64.5%;
+  width: 61.1%;
+  height: 8.0%;
+}
+
+.q6{
+  position: relative;
+  left:2.5%;
+  top:2.2%;
+  width:94.6%;
+  height:92.7%;
+  background-image: url("/images/q6.png");
+  background-size: cover;
+}
+
+.q7s1{
+  position: absolute;
+  left: 8.1%;
+  top:41.3%;
+  width: 57%;
+  height: 8.0%;
+}
+
+.q7s2{
+  position: absolute;
+  left: 24%;
+  top: 52.9%;
+  width: 55.5%;
+  height: 8.0%;
+}
+
+.q7s3{
+  position: absolute;
+  left: 8.1%;
+  top: 64.5%;
+  width: 55.5;
+  height: 8.0%;
+}
+
+.q7{
+  position: relative;
+  left:2.5%;
+  top:2.2%;
+  width:94.6%;
+  height:92.7%;
+  background-image: url("/images/q7.png");
+  background-size: cover;
+}
+
+.swiper-questionnaire {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+html, body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color:#000;
+  margin: 0;
+  padding: 0;
+}

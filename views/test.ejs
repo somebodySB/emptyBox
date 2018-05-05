@@ -17,49 +17,15 @@
       <div class="swiper-slide" data-swiper-parallax="-30%">
         <h1>这是标题</h1>
       </div>
-      <div class="swiper-slide" data-swiper-parallax="-30%">
-        <!-- <div id="bg"></div> -->
-        <button onclick="polygonPos.next()" style="z-index:9999;position:absolute;right: 0%; top:50%;">next</button>
-        <button onclick="polygonPos.last()" style="z-index:9999;position:absolute;left: 0%; top:50%;">last</button>
-        <div class="trans" id="transl" >
-
-          <div id="first" class="polygon">
-            <div style="position:relative; top:13%; left:15%; width:70%; height:51%;">
-              <img src="/images/1.png"></img>
-            </div>
-          </div>
-
-          <div id="second" class="polygon">
-            <div style="position:relative; top:13%; left:15%; width:70%; height:51%;">
-              <img src="/images/2.png"></img>
-            </div>
-          </div>
-
-          <div id="third" class="polygon">
-            <div style="position:relative; top:13%; left:15%; width:70%; height:51%;">
-              <img src="/images/3.png"></img>
-            </div>
-          </div>
-
-          <div id="forth" class="polygon">
-            <div style="position:relative; top:13%; left:15%; width:70%; height:51%;">
-              <img src="/images/4.png"></img>
-            </div>
-          </div>
-
-          <div id="fifth" class="polygon">
-            <div style="position:relative; top:13%; left:15%; width:70%; height:51%;">
-              <img src="/images/5.png"></img>
-            </div>
-          </div>
-
-          <div id="sixth" class="polygon">
-            <div style="position:relative; top:13%; left:15%; width:70%; height:51%;">
-              <img src="/images/6.png"></img>
-            </div>
-          </div>
-
-        </div>
+       <div class="swiper-slide" data-swiper-parallax="-30%">
+         <video src="/images/test-480.mp4"
+         style="width:100%; object-fit: cover; " id="myVideo"
+         autoplay="autoplay"
+         preload="auto"
+         x5-playsinline="true"
+         webkit-playsinline="true"
+         x-webkit-airplay="allow">aaa</video>
+         <canvas id="myCanvas"></canvas>
      </div>
       <div class="swiper-slide" id = "touch" data-swiper-parallax="-30%">
         <form action="/question" method="post">
@@ -74,7 +40,32 @@
 </div>
 
 
-
+    <script>
+    var u = navigator.userAgent;
+    var isAndriod = u.indexOf("Android")>-1||u.indexOf("Adr")>-1;
+    var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    var video = document.getElementById("myVideo");
+    var canvas = document.getElementById("myCanvas");
+    video.addEventListener("ended",function(){
+     swiper.slideNext();
+   });
+    if(isAndriod){
+      // video.style.display = "none";
+      // canvas.show();
+    }else{
+      // video.show();
+      // video.style.display = "none";
+      // canvas.style.display = "none";
+    }
+    // var videoanimate;
+    // context = canvas.getContext("2d");
+    // context.fillStyle = "#fff";
+    // context.fillRect(0,0,canvas.width,canvas.height);
+    // function animate(){
+    //   context.drawImage(video,0,0,canvas.width,canvas.height);
+    //   // alert("huale");
+    //   videoanimate = requestAnimationFrame(animate);
+    // }
     </script>
 
     <!-- Swiper JS -->
@@ -86,7 +77,15 @@
     direction : 'vertical',
     allowSlidePrev : false,
     parallax : true,
-  });
+    on : {
+      slideChange:function(){
+        if(swiper.activeIndex == 1){
+          video.play();
+          // animate();
+        }
+      },
+    },
+    });
 
     </script>
   </body>

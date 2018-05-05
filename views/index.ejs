@@ -1,27 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" onloadstart="loadResource()">
   <head>
     <meta charset="utf-8">
     <meta content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" name="viewport" />
-    <link rel="prefetch" href="test"/>
-    <link rel="prefetch" href="/images/1.png"/>
-    <link rel="prefetch" href="/images/2.png"/>
-    <link rel="prefetch" href="/images/3.png"/>
-    <link rel="prefetch" href="/images/4.png"/>
-    <link rel="prefetch" href="/images/5.png"/>
-    <link rel="prefetch" href="/images/6.png"/>
-    <link rel="prefetch" href="/images/test_background.jpeg"/>
-    <link rel="prefetch" href="/images/yyy.gif"/>
-    <link rel="prefetch" href="/images/bt_enter_clicked.png"/>
     <link rel="stylesheet" href="/stylesheets/home.css" />
     <title>空箱情报所</title>
   </head>
   <body>
-    <!-- <div id="loadingDiv">
-      <img src="/images/loading.png"></img>
-    </div> -->
-    <div id="homeImg">
-      <img src="/images/home.png"></img>
+    <div id="loadingDiv">
+      <img src="/images/loading.png" id="loadImg"></img>
+      <progress id="progress" value="0"></progress>
+    </div>
+    <div id="homeImgDiv">
+      <img src="/images/home.png" id="homeImg"></img>
     </div>
     <div id="enterButton">
       <button ontouchstart = "change_img()" ontouchend = "getIntoMain()" onclick="getIntoMain()">
@@ -30,16 +21,95 @@
     </div>
 
   </body>
-
+  <script src="/javascripts/resLoader.js"></script>
   <script>
-  function loading(){
-    // var resources = [];
-    // var nb_loaded = 0;
-    // var image = new Image();
-    // image.onLoad = function(){
-    //
-    // }
-  }
+  var loader = new resLoader({
+  	resources : [
+  		"test",
+  		"/images/1.png",
+  		"/images/2.png",
+  		"/images/3.png",
+  		"/images/4.png",
+  		"/images/5.png",
+  		"/images/6.png",
+  		"/images/test_background.jpeg",
+  		"/images/yyy.gif",
+  		"/images/bt_enter_clicked.png",
+  		"/images/home.png",
+      "/image/q1.png",
+      "/image/q1s1.png",
+      "/image/q1s1_c.png",
+      "/image/q1s2.png",
+      "/image/q1s2_c.png",
+      "/image/q1s3.png",
+      "/image/q1s3_c.png",
+      "/image/q2.png",
+      "/image/q2s1.png",
+      "/image/q2s1_c.png",
+      "/image/q2s2.png",
+      "/image/q2s2_c.png",
+      "/image/q2s3.png",
+      "/image/q2s3_c.png",
+      "/image/q3.png",
+      "/image/q3s1.png",
+      "/image/q3s1_c.png",
+      "/image/q3s2.png",
+      "/image/q3s2_c.png",
+      "/image/q3s3.png",
+      "/image/q3s3_c.png",
+      "/image/q4.png",
+      "/image/q4s1.png",
+      "/image/q4s1_c.png",
+      "/image/q4s2.png",
+      "/image/q4s2_c.png",
+      "/image/q4s3.png",
+      "/image/q4s3_c.png",
+      "/image/q5.png",
+      "/image/q5s1.png",
+      "/image/q5s1_c.png",
+      "/image/q5s2.png",
+      "/image/q5s2_c.png",
+      "/image/q5s3.png",
+      "/image/q5s3_c.png",
+      "/image/q6.png",
+      "/image/q6s1.png",
+      "/image/q6s1_c.png",
+      "/image/q6s2.png",
+      "/image/q6s2_c.png",
+      "/image/q6s3.png",
+      "/image/q6s3_c.png",
+      "/image/q7.png",
+      "/image/q7s1.png",
+      "/image/q7s1_c.png",
+      "/image/q7s2.png",
+      "/image/q7s2_c.png",
+      "/image/q7s3.png",
+      "/image/q7s3_c.png",
+
+  	],
+  	onStart : function(total){
+  		console.log('start:'+total);
+  	},
+  	onProgress : function(current, total){
+  		console.log(current+'/'+total);
+  		var percent = current/total;
+      var progress = document.getElementById("progress");
+      progress.value = percent;
+      if(current == total){
+        var load_div = document.getElementById("loadingDiv");
+        load_div.style.display = "none";
+      }
+  	},
+  	onComplete : function(total){
+  		// alert('加载完毕:'+total+'个资源');
+  	}
+  });
+
+  loader.start();
+
+  // function loading(){
+  //
+  // }
   function getIntoMain(){
 
     window.location.href='test';
@@ -49,4 +119,6 @@
     img.src = "/images/bt_enter_clicked.png";
   }
   </script>
+
+
 </html>
