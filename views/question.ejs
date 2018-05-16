@@ -11,7 +11,9 @@
   </head>
   <body onload="init()">
     <div class = "swiper-questionnaire">
+
       <div class="swiper-wrapper">
+
         <div class="swiper-slide">
 
             <form id = "1stQ">
@@ -54,6 +56,8 @@
                 <img src = "/images/q2s3_c.png" class = "q2s3"></img>
                 <img src="/images/q2s3.png" class="q2s3" ontouchstart="touchStart(this)" ontouchend="touchEnd(this)"></img></label>
             </input></br>
+            <img src="/images/bt_back_c.png" class="bt_back"></img>
+            <img src="/images/bt_back.png" class="bt_back" ontouchstart="touchStart(this)" ontouchend="touch_bt_back(this)"></img>
             </div>
           </form>
         </div>
@@ -75,6 +79,8 @@
                 <img src = "/images/q3s3_c.png" class = "q3s3"></img>
                 <img src="/images/q3s3.png" class="q3s3" ontouchstart="touchStart(this)" ontouchend="touchEnd(this)"></img></label>
             </input></br>
+            <img src="/images/bt_back_c.png" class="bt_back"></img>
+            <img src="/images/bt_back.png" class="bt_back" ontouchstart="touchStart(this)" ontouchend="touch_bt_back(this)"></img>
             </div>
           </form>
         </div>
@@ -96,6 +102,8 @@
                 <img src = "/images/q4s3_c.png" class = "q4s3"></img>
                 <img src="/images/q4s3.png" class="q4s3" ontouchstart="touchStart(this)" ontouchend="touchEnd(this)"></img></label>
             </input></br>
+            <img src="/images/bt_back_c.png" class="bt_back"></img>
+            <img src="/images/bt_back.png" class="bt_back" ontouchstart="touchStart(this)" ontouchend="touch_bt_back(this)"></img>
             </div>
           </form>
         </div>
@@ -117,6 +125,8 @@
                 <img src = "/images/q5s3_c.png" class = "q5s3"></img>
                 <img src="/images/q5s3.png" class="q5s3" ontouchstart="touchStart(this)" ontouchend="touchEnd(this)"></img></label>
             </input></br>
+            <img src="/images/bt_back_c.png" class="bt_back"></img>
+            <img src="/images/bt_back.png" class="bt_back" ontouchstart="touchStart(this)" ontouchend="touch_bt_back(this)"></img>
             </div>
           </form>
         </div>
@@ -138,6 +148,8 @@
                 <img src = "/images/q6s3_c.png" class = "q6s3"></img>
                 <img src="/images/q6s3.png" class="q6s3" ontouchstart="touchStart(this)" ontouchend="touchEnd(this)"></img></label>
             </input></br>
+            <img src="/images/bt_back_c.png" class="bt_back"></img>
+            <img src="/images/bt_back.png" class="bt_back" ontouchstart="touchStart(this)" ontouchend="touch_bt_back(this)"></img>
             </div>
           </form>
         </div>
@@ -159,6 +171,8 @@
                 <img src = "/images/q7s3_c.png" class = "q7s3"></img>
                 <img src="/images/q7s3.png" class="q7s3" ontouchstart="touchStart(this)" ontouchend="touchEnd(this)"></img></label>
             </input></br>
+            <img src="/images/bt_back_c.png" class="bt_back"></img>
+            <img src="/images/bt_back.png" class="bt_back" ontouchstart="touchStart(this)" ontouchend="touch_bt_back(this)"></img>
             </div>
           </form>
         </div>
@@ -168,8 +182,10 @@
           请摇晃手机！
         </div>
       </div>
+      <progress id="quest_progress" value="0.1428"></progress>
     </div>
   </body>
+
   <script>
   function init(){
     questionList.push(document.getElementById("1stQ"));
@@ -182,20 +198,18 @@
   }
 
   function touchStart(btn){
-    // String.prototype.splice = function(start, newStr) {
-    //     return this.slice(0, start) + newStr + this.slice(start);
-    // };
-    // var index = btn.src.indexOf('.png');
-    //     str = btn.src.splice(index, '_c');
-    //     btn.src=str;
     btn.style.visibility = "hidden";
   }
 
   function touchEnd(btn){
-        // str = btn.src;
-        // str = str.replace(/_c/,"");
-        // btn.src =str;
-        btn.style.visibility = "visible";
+    btn.style.visibility = "visible";
+  }
+
+  function touch_bt_back(btn){
+    touchEnd(btn);
+    setTimeout(function () {
+      swiper_questionnaire.slidePrev();
+    }, 200);
   }
   </script>
   <!-- Swiper JS -->
@@ -203,16 +217,22 @@
 
   <!-- Initialize Swiper -->
   <script>
-  var swiper_questionnaire = new Swiper(".swiper-questionnaire",{});
+  var swiper_questionnaire = new Swiper(".swiper-questionnaire",{
+    // noSwiping:true;
+     allowTouchMove: false,
+     on : {
+       slideChange:function(){
+         var progress = document.getElementById("quest_progress");
+         progress.value = (swiper_questionnaire.activeIndex+1)/7;
+         if(swiper_questionnaire.activeIndex==7){
+           progress.style.display = "none";
+         }
+       },
+     },
+  });
   </script>
 
   <script>
   testeeName = "<%= locals.name %>";
-  </script>
-
-  <script>
-  function clicked(){
-
-  }
   </script>
 </html>

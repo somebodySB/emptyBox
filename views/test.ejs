@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="/stylesheets/swiper/dist/css/swiper.min.css" />
     <script src="/javascripts/polygonTrans.js"></script>
     <script src="/javascripts/moveMotion.js"></script>
+    <!-- <script src="/javascripts/p5/p5.min.js"></script>
+    <script src="/javascripts/p5/addons/p5.dom.min.js"></script>
+    <script src="/javascripts/p5Video.js"></script> -->
     <title>空箱情报所</title>
   </head>
   <body style="background-color:rgb(200,200,200)" >
@@ -14,10 +17,7 @@
 <div class="swiper-container">
   <div class="parallax-bg" data-swiper-parallax="-30%"></div>
     <div class="swiper-wrapper" >
-      <div class="swiper-slide" data-swiper-parallax="-30%">
-        <h1>这是标题</h1>
-      </div>
-       <div class="swiper-slide" data-swiper-parallax="-30%">
+       <div class="swiper-slide" data-swiper-parallax="-30%" id="videoDiv">
          <video src="/images/test-480.mp4"
          style="width:100%; object-fit: cover; " id="myVideo"
          autoplay="autoplay"
@@ -25,7 +25,7 @@
          x5-playsinline="true"
          webkit-playsinline="true"
          x-webkit-airplay="allow">aaa</video>
-         <canvas id="myCanvas"></canvas>
+         <!-- <canvas id="myCanvas"></canvas> -->
      </div>
       <div class="swiper-slide" id = "touch" data-swiper-parallax="-30%">
         <form action="/question" method="post">

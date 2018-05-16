@@ -12,13 +12,35 @@
       <progress id="progress" value="0"></progress>
     </div>
     <div id="homeImgDiv">
-      <img src="/images/home.png" id="homeImg"></img>
-    </div>
-    <div id="enterButton">
-      <button ontouchstart = "change_img()" ontouchend = "getIntoMain()" onclick="getIntoMain()">
-        <img src="/images/bt_enter.png" id = "img_enter"></img>
+
+      <img src="/images/home/background.png" id = "homeBackground"></img>
+      <img src="/images/home/charact1.png" id ="homeC1"></img>
+      <img src="/images/home/charact2.png" id ="homeC2"></img>
+      <img src="/images/home/body.png" id ="homeBody"></img>
+      <img src="/images/home/charact3.png" id ="homeC3"></img>
+      <img src="/images/home/shadow.png" id ="homeShadow"></img>
+      <img src="/images/home/light.png" id = "homeLight"></img>
+      <img src="/images/home/tvlight.png" id = "homeTvlight"></img>
+      <img src="/images/home/signal1.png" id = "homeSignal1"></img>
+      <img src="/images/home/signal2.png" id = "homeSignal2"></img>
+      <img src="/images/home/signal3.png" id = "homeSignal3"></img>
+      <img src="/images/home/spot1.png" id = "Lspot1"></img>
+      <img src="/images/home/spot2.png" id = "Lspot2"></img>
+      <img src="/images/home/spot3.png" id = "Lspot3"></img>
+      <img src="/images/home/spot4.png" id = "Lspot4"></img>
+      <img src="/images/home/spot1.png" id = "Rspot1"></img>
+      <img src="/images/home/spot2.png" id = "Rspot2"></img>
+      <img src="/images/home/spot3.png" id = "Rspot3"></img>
+      <img src="/images/home/spot4.png" id = "Rspot4"></img>
+      <button ontouchstart = "change_img()" ontouchend = "getIntoMain()" onclick="getIntoMain()" id ="home_bt_enter">
+        <img src="/images/home/bt_enter.png" id = "img_enter"></img>
       </button>
     </div>
+    <!-- <div id="enterButton">
+      <button ontouchstart = "change_img()" ontouchend = "getIntoMain()" onclick="getIntoMain()">
+        <img src="/images/home/bt_enter.png" id = "img_enter"></img>
+      </button>
+    </div> -->
 
   </body>
   <script src="/javascripts/resLoader.js"></script>
@@ -32,60 +54,74 @@
   		"/images/4.png",
   		"/images/5.png",
   		"/images/6.png",
-  		"/images/test_background.jpeg",
-  		"/images/yyy.gif",
   		"/images/bt_enter_clicked.png",
   		"/images/home.png",
-      "/image/q1.png",
-      "/image/q1s1.png",
-      "/image/q1s1_c.png",
-      "/image/q1s2.png",
-      "/image/q1s2_c.png",
-      "/image/q1s3.png",
-      "/image/q1s3_c.png",
-      "/image/q2.png",
-      "/image/q2s1.png",
-      "/image/q2s1_c.png",
-      "/image/q2s2.png",
-      "/image/q2s2_c.png",
-      "/image/q2s3.png",
-      "/image/q2s3_c.png",
-      "/image/q3.png",
-      "/image/q3s1.png",
-      "/image/q3s1_c.png",
-      "/image/q3s2.png",
-      "/image/q3s2_c.png",
-      "/image/q3s3.png",
-      "/image/q3s3_c.png",
-      "/image/q4.png",
-      "/image/q4s1.png",
-      "/image/q4s1_c.png",
-      "/image/q4s2.png",
-      "/image/q4s2_c.png",
-      "/image/q4s3.png",
-      "/image/q4s3_c.png",
-      "/image/q5.png",
-      "/image/q5s1.png",
-      "/image/q5s1_c.png",
-      "/image/q5s2.png",
-      "/image/q5s2_c.png",
-      "/image/q5s3.png",
-      "/image/q5s3_c.png",
-      "/image/q6.png",
-      "/image/q6s1.png",
-      "/image/q6s1_c.png",
-      "/image/q6s2.png",
-      "/image/q6s2_c.png",
-      "/image/q6s3.png",
-      "/image/q6s3_c.png",
-      "/image/q7.png",
-      "/image/q7s1.png",
-      "/image/q7s1_c.png",
-      "/image/q7s2.png",
-      "/image/q7s2_c.png",
-      "/image/q7s3.png",
-      "/image/q7s3_c.png",
-
+      "/images/q1.png",
+      "/images/q1s1.png",
+      "/images/q1s1_c.png",
+      "/images/q1s2.png",
+      "/images/q1s2_c.png",
+      "/images/q1s3.png",
+      "/images/q1s3_c.png",
+      "/images/q2.png",
+      "/images/q2s1.png",
+      "/images/q2s1_c.png",
+      "/images/q2s2.png",
+      "/images/q2s2_c.png",
+      "/images/q2s3.png",
+      "/images/q2s3_c.png",
+      "/images/q3.png",
+      "/images/q3s1.png",
+      "/images/q3s1_c.png",
+      "/images/q3s2.png",
+      "/images/q3s2_c.png",
+      "/images/q3s3.png",
+      "/images/q3s3_c.png",
+      "/images/q4.png",
+      "/images/q4s1.png",
+      "/images/q4s1_c.png",
+      "/images/q4s2.png",
+      "/images/q4s2_c.png",
+      "/images/q4s3.png",
+      "/images/q4s3_c.png",
+      "/images/q5.png",
+      "/images/q5s1.png",
+      "/images/q5s1_c.png",
+      "/images/q5s2.png",
+      "/images/q5s2_c.png",
+      "/images/q5s3.png",
+      "/images/q5s3_c.png",
+      "/images/q6.png",
+      "/images/q6s1.png",
+      "/images/q6s1_c.png",
+      "/images/q6s2.png",
+      "/images/q6s2_c.png",
+      "/images/q6s3.png",
+      "/images/q6s3_c.png",
+      "/images/q7.png",
+      "/images/q7s1.png",
+      "/images/q7s1_c.png",
+      "/images/q7s2.png",
+      "/images/q7s2_c.png",
+      "/images/q7s3.png",
+      "/images/q7s3_c.png",
+      "/images/home/background.png",
+      "/images/home/body.png",
+      "/images/home/bt_enter.png",
+      "/images/home/bt_enter_c.png",
+      "/images/home/charact1.png",
+      "/images/home/charact2.png",
+      "/images/home/charact3.png",
+      "/images/home/light.png",
+      "/images/home/shadow.png",
+      "/images/home/signal1.png",
+      "/images/home/signal2.png",
+      "/images/home/signal3.png",
+      "/images/home/spot1.png",
+      "/images/home/spot2.png",
+      "/images/home/spot3.png",
+      "/images/home/spot4.png",
+      "/images/home/tvlight.png"
   	],
   	onStart : function(total){
   		console.log('start:'+total);
@@ -116,8 +152,10 @@
   }
   function change_img(){
     var img = document.getElementById("img_enter");;
-    img.src = "/images/bt_enter_clicked.png";
+    img.src = "/images/home/bt_enter_c.png";
   }
+
+
   </script>
 
 

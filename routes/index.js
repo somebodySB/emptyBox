@@ -20,6 +20,9 @@ var router = function(app){
   app.post('/question',function(req,res,next){
     res.render('question',{title:'诊断中……', name: req.body.name})
   })
+  app.get('/answer', function(req, res, next) {
+    res.render('index', { title: 'Express' });
+  });
 }
 
 module.exports = router;
