@@ -150,6 +150,27 @@ body {
   background-size: cover;
 }
 
+#arrow{
+  position: absolute;
+  left: 3.65rem;
+  top:14.39rem;
+  width: .35rem;
+  height: .36rem;
+  animation: arrow 0.5s;
+  animation-timing-function: ease-in;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes arrow {
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(0.5rem);
+  }
+}
+
 .swiper-slide {
   font-size: 18px;
   /* background: #fff; */
