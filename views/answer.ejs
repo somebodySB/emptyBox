@@ -4,33 +4,64 @@
     <meta charset="utf-8">
     <meta content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" name="viewport" />
     <title><%= title%></title>
+    <link rel="stylesheet" href="/stylesheets/answer.css" />
     <script src="/javascripts/html2canvas.min.js"></script>
     <script src="/javascripts/html2canvas.js"></script>
     <script src="/javascripts/canvas2image.js"></script>
+</script>
 
   </head>
   <body style="height:100%;overflow:hidden;margin: 0;padding: 0;">
-    <div id = "test" style="overflow:hidden; position:absolute;left:100%;top:-100%;width:100%; ">
-      <%= locals.name %>的诊断报告:
-      </br>
-      <img id = "Img1" style="width:50px; height:50px"></img>
-      <img id = "Img2" style="width:50px; height:50px"></img>
-      <img id = "Img3" style="width:50px; height:50px"></img>
-    </div>
-    <img src="/images/test3.png"></img>
-    <!-- <canvas id="mCan" hidden = "hidden" style="width:100%; height: 100%"></canvas> -->
-    <!-- <div>
-      <button onclick="downImg()" id = "getImg">点击生成病历</button>
-    </div> -->
+    <img src="/images/answer/background.png" id="background" ontouchstart="return false;"></img>
+    <div id="container">
+
+    <img id="report"></img>
+    <div id="nameText"><%= name%></div>
+    <div id="greeting"></div>
+    <div id="date"></div>
+    <img id="virus1"></img>
+    <div id="virusName1"></div>
+    <div id="ratio1"></div>
+    <img id="virus2"></img>
+    <div id="virusName2"></div>
+    <div id="ratio2"></div>
+    <img id="virus3"></img>
+    <div id="virusName3"></div>
+    <div id="ratio3"></div>
+    <div id="inviteDate"></div>
+    <div id="inviteAddress">江南大学数字媒体学院</div>
+  </div>
+
+  <canvas id="myCanvas" class="myCanvas"></canvas>
+  <div id = "save">长按保存图片</div>
   </body>
 
   <script>
+  var nameText = document.getElementById("nameText");
   var score = [];
 
     <% var j=0 %>
       <% for (var i = 0;i<locals.score.length;i++) {%>
       score.push(<%= locals.score[i]%>);
       <% } %>
+
+      var html = document.querySelector('html');
+      function setPxPerRem(){
+          var dpr = 1;
+          var pxPerRem = document.documentElement.clientWidth * dpr / 10;
+          html.style.fontSize = pxPerRem + "px";
+      };
+      setPxPerRem();
+
+      function canvasOpacity(){
+        var myCanvas = document.getElementById("myCanvas");
+        var context2D = myCanvas.getContext("2d");
+        context2D.globalAlpha=0;
+        context2D.fill();
+      }
+      canvasOpacity();
   </script>
   <script src="/javascripts/showAnswer.js"></script>
+
+
 </html>

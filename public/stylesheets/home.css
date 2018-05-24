@@ -1,17 +1,16 @@
 #homeImgDiv{
   background-color: black;
-  position: relative;
-  left: 6.66%;
-  width: 86.6%;
-  height: 74%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 #homeBody{
   position: absolute;
-  left:8.9%;
-  top:16.5%;
-  width:86.7%;
-  /* height: 70.8%; */
+  left:.89rem;
+  top:2.46rem;
+  width:8.67rem;
+  /* height: 59.3%; */
 }
 
 #homeBackground{
@@ -20,12 +19,12 @@
   height: 100%;
 }
 
-#homeC1{
+#homeC3{
   position: absolute;
-  left:12%;
-  top:32.3%;
-  width: 16.7%;
-  animation: c1 infinite 1s;
+  left:.68rem;
+  top:9.2rem;
+  width: 1.87rem;
+  animation: c3 infinite 1s;
   animation-direction:alternate;
 }
 
@@ -37,9 +36,9 @@ to {transform: rotateZ(10deg);}
 
 #homeC2{
   position: absolute;
-  left:71.1%;
-  top:34.2%;
-  width: 20%;
+  left:7.11rem;
+  top:5.11rem;
+  width: 2rem;
   animation: c2 infinite 1s;
   animation-direction:alternate;
 }
@@ -50,12 +49,12 @@ from {transform: translate3d(0,0,0);}
 to {transform: translate3d(-5px,-5px,0);}
 }
 
-#homeC3{
+#homeC1{
   position: absolute;
-  left:6.8%;
-  top:61.7%;
-  width: 18.7%;
-  animation: c3 infinite 1s;
+  left:1.17rem;
+  top:4.76rem;
+  width: 1.67rem;
+  animation: c1 infinite 1s;
   animation-direction:alternate;
 }
 
@@ -67,9 +66,9 @@ to {transform: translate3d(0,10px,0);}
 
 #homeShadow{
   position: absolute;
-  left: 8.9%;
-  top:77.5%;
-  width: 11.9%;
+  left: .89rem;
+  top:11.56rem;
+  width: 1.19rem;
   animation: shadow infinite 1s;
   animation-direction: alternate;
 }
@@ -81,9 +80,9 @@ to {transform: translate3d(0,10px,0);}
 
 #homeLight{
   position: absolute;
-  left: 5.8%;
-  top:46.5%;
-  width: 18.7%;
+  left: .56rem;
+  top:6.93rem;
+  width: 1.87rem;
   animation: light infinite 0.5s;
   animation-direction: alternate;
 }
@@ -95,22 +94,22 @@ to {transform: translate3d(0,10px,0);}
 
 #homeTvlight{
   position: absolute;
-  left: 60.8%;
-  top:56.9%;
-  width: 18.7%;
-  animation: light infinite 0.5s;
+  left: 6.03rem;
+  top:8.49rem;
+  width: 1.87rem;
+  animation: light infinite 0.1s;
   animation-direction: alternate;
 }
 
 #homeSignal1{
   position: absolute;
-  left: 56.4%;
-  top:27.3%;
-  width: 1.3%;
-  animation: signal1 infinite 1.5s;
+  left: 5.64rem;
+  top:4.07rem;
+  width: .13rem;
+  animation: signal infinite 1.5s;
 }
 
-@keyframes signal1 {
+@keyframes signal {
   0% {opacity: 1;}
   50% {opacity: 1;}
   51% {opacity: 0;}
@@ -119,42 +118,31 @@ to {transform: translate3d(0,10px,0);}
 
 #homeSignal2{
   position: absolute;
-  left: 56.5%;
-  top:25.5%;
-  width: 4%;
-  animation: signal2 infinite 1.5s;
+  left: 5.71rem;
+  top:3.8rem;
+  width: .32rem;
+  animation: signal infinite 1.5s;
   animation-delay: 0.25s;
 }
 
-@keyframes signal2 {
-  0% {opacity: 1;}
-  50% {opacity: 1;}
-  51% {opacity: 0;}
-  100% {opacity: 0;}
-}
 
 #homeSignal3{
   position: absolute;
-  left: 56.5%;
-  top:23.6%;
-  width: 7%;
-  animation: signal3 infinite 1.5s;
+  left: 5.71rem;
+  top:3.51rem;
+  width: .64rem;
+  animation: signal infinite 1.5s;
   animation-delay: 0.5s;
 }
 
-@keyframes signal3 {
-  0% {opacity: 1;}
-  50% {opacity: 1;}
-  51% {opacity: 0;}
-  100% {opacity: 0;}
-}
+
 
 #Lspot1{
   position: absolute;
-  left: 20.4%;
-  top: 95.3%;
-  width: 3.9%;
-  animation: spot infinite 2s;
+  left: 2.04rem;
+  top: 14.21rem;
+  width: .39rem;
+  animation: spot infinite 1s;
 }
 
 @keyframes spot {
@@ -166,65 +154,65 @@ to {transform: translate3d(0,10px,0);}
 
 #Lspot2{
   position: absolute;
-  left: 16.8%;
-  top: 95.3%;
-  width: 3.9%;
-  animation: spot infinite 2s;
-  animation-delay: 0.25s;
+  left: 1.68rem;
+  top: 14.25rem;
+  width: .32rem;
+  animation: spot infinite 1s;
+  animation-delay: 0.125s;
 }
 
 
 #Lspot3{
   position: absolute;
-  left: 13.7%;
-  top: 95.3%;
-  width: 3.9%;
-  animation: spot infinite 2s;
-  animation-delay: 0.5s;
+  left: 1.37rem;
+  top: 14.27rem;
+  width: .28rem;
+  animation: spot infinite 1s;
+  animation-delay: 0.25s;
 }
 
 #Lspot4{
   position: absolute;
-  left: 11%;
-  top: 95.3%;
-  width: 3.9%;
-  animation: spot infinite 2s;
-  animation-delay: 0.75s;
+  left: 1.1rem;
+  top: 14.29rem;
+  width: .22rem;
+  animation: spot infinite 1s;
+  animation-delay: 0.375s;
 }
 
 #Rspot1{
   position: absolute;
-  left: 74.8%;
-  top: 95.3%;
-  width: 3.9%;
-  animation: spot infinite 2s;
+  left: 7.48rem;
+  top: 14.21rem;
+  width: .39rem;
+  animation: spot infinite 1s;
 }
 
 #Rspot2{
   position: absolute;
-  left: 79.6%;
-  top: 95.3%;
-  width: 3.9%;
-  animation: spot infinite 2s;
-  animation-delay: 0.25s;
+  left: 7.91rem;
+  top: 14.25rem;
+  width: .32rem;
+  animation: spot infinite 1s;
+  animation-delay: 0.125s;
 }
 
 #Rspot3{
   position: absolute;
-  left: 83.1%;
-  top: 95.3%;
-  width: 3.9%;
-  animation: spot infinite 2s;
-  animation-delay: 0.5s;
+  left: 8.25rem;
+  top: 14.27rem;
+  width: .28rem;
+  animation: spot infinite 1s;
+  animation-delay: 0.25s;
 }
 
 #Rspot4{
   position: absolute;
-  left: 85.9%;
-  top: 95.3%;
-  width: 3.9%;
-  animation: spot infinite 2s;
-  animation-delay: 0.75s;
+  left: 8.59rem;
+  top: 14.29rem;
+  width: .22rem;
+  animation: spot infinite 1s;
+  animation-delay: 0.375s;
 }
 
 Img{
@@ -252,9 +240,9 @@ progress::-webkit-progress-bar { border-radius: 8px; background: -webkit-gradien
 
 #home_bt_enter{
   background-color: black;
-  left: 24.8%;
-  top:100%;
-  width: 49.3%;
+  left: 2.48rem;
+  top:13.61rem;
+  width: 4.93rem;
   position: absolute;
 }
 

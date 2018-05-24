@@ -1,0 +1,189 @@
+#background{
+  position: absolute;
+  left: 0;
+  top:0;
+  width:10rem;
+  height: 17.79rem;
+}
+
+#report{
+  position: absolute;
+
+  width:100%;
+
+}
+
+#virus1{
+  position: absolute;
+  left: 6.43rem;
+  top:3.2rem;
+  width:1.67rem;
+}
+
+#virusName1{
+  position: absolute;
+  left: 2.83rem;
+  top:3.56rem;
+  width:3rem;
+  color:white;
+  font-size: .4rem;
+  text-align: left;
+  font-family: "siyuan";
+}
+
+#ratio1{
+  position: absolute;
+  left: 2.83rem;
+  top:4.05rem;
+  width:1.07rem;
+  color:white;
+  font-size: .4rem;
+  text-align: left;
+  font-family: "siyuan";
+}
+
+#virus2{
+  position: absolute;
+  left: 6.43rem;
+  top:5.04rem;
+  width:1.67rem;
+}
+
+#virusName2{
+  position: absolute;
+  left: 2.83rem;
+  top:5.39rem;
+  width:3rem;
+  color:white;
+  font-size: .4rem;
+  text-align: left;
+  font-family: "siyuan";
+}
+
+#ratio2{
+  position: absolute;
+  left: 2.83rem;
+  top:5.95rem;
+  width:1.07rem;
+  color:white;
+  font-size: .4rem;
+  text-align: left;
+  font-family: "siyuan";
+}
+
+#virus3{
+  position: absolute;
+  left: 6.43rem;
+  top:6.88rem;
+  width:1.67rem;
+}
+
+#virusName3{
+  position: absolute;
+  left: 2.83rem;
+  top:7.2rem;
+  width:3rem;
+  color:white;
+  font-size: .4rem;
+  text-align: left;
+  font-family: "siyuan";
+}
+
+#ratio3{
+  position: absolute;
+  left: 2.83rem;
+  top:7.77rem;
+  width:1.07rem;
+  color:white;
+  font-size: .4rem;
+  text-align: left;
+  font-family: "siyuan";
+}
+
+#greeting{
+  position: absolute;
+  text-align: center;
+  color:white;
+  top:8.95rem;
+  left:1rem;
+  width:6.73rem;
+  font-size: .4rem;
+  font-family: "siyuan";
+}
+
+#container{
+  /* display: none; */
+  position: relative;
+  left:.65rem;
+  top:.93rem;
+  width:8.73rem;
+  height:14.15rem;
+}
+
+#nameText{
+  position: absolute;
+  right:.85rem;
+  top:1.7rem;
+  width:3rem;
+  height:.56rem;
+  color:white;
+  font-size: .48rem;
+  text-align: right;
+  font-family: "siyuan";
+}
+
+#date{
+  position: absolute;
+  left:3.19rem;
+  top:1.04rem;
+  width:1.41rem;
+  height:.26rem;
+  color:white;
+  font-size: .29rem;
+  text-align: center;
+  font-family: "siyuan";
+}
+
+#save{
+  position: absolute;
+  right:.75rem;
+  top:15.3rem;
+  width:3rem;
+  color:white;
+  font-size: .27rem;
+  text-align: right;
+}
+
+#inviteDate{
+  position: absolute;
+  left:4.39rem;
+  top:10.64rem;
+  width:3.2rem;
+  color:white;
+  font-size: .29rem;
+  text-align: center;
+  font-family: "siyuan";
+}
+
+#inviteAddress{
+  position: absolute;
+  left:4.39rem;
+  top:10.94rem;
+  width:3.2rem;
+  color:white;
+  font-size: .29rem;
+  text-align: center;
+  font-family: "siyuan";
+}
+
+.myCanvas{
+  position: absolute;
+  left:.65rem;
+  top:.93rem;
+  width:8.73rem;
+}
+
+@font-face {
+  font-family: "siyuan";
+  src:url('http://cdn.webfont.youziku.com/webfonts/custompath/6E2780359358FEAB/emptyBox/font/myFont.bmp') format('woff');
+}

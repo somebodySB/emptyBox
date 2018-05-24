@@ -7,155 +7,186 @@
     <title>空箱情报所</title>
   </head>
   <body>
+    <audio src="/sounds/sound.mp3" autoplay="true" preload="preload" loop="loop"></audio>
     <div id="loadingDiv">
-      <img src="/images/loading.png" id="loadImg"></img>
+      <img src="/images/loading.png" id="loadImg" ontouchstart="return false;"></img>
       <progress id="progress" value="0"></progress>
     </div>
     <div id="homeImgDiv">
 
-      <img src="/images/home/background.png" id = "homeBackground"></img>
-      <img src="/images/home/charact1.png" id ="homeC1"></img>
-      <img src="/images/home/charact2.png" id ="homeC2"></img>
-      <img src="/images/home/body.png" id ="homeBody"></img>
-      <img src="/images/home/charact3.png" id ="homeC3"></img>
-      <img src="/images/home/shadow.png" id ="homeShadow"></img>
-      <img src="/images/home/light.png" id = "homeLight"></img>
-      <img src="/images/home/tvlight.png" id = "homeTvlight"></img>
-      <img src="/images/home/signal1.png" id = "homeSignal1"></img>
-      <img src="/images/home/signal2.png" id = "homeSignal2"></img>
-      <img src="/images/home/signal3.png" id = "homeSignal3"></img>
-      <img src="/images/home/spot1.png" id = "Lspot1"></img>
-      <img src="/images/home/spot2.png" id = "Lspot2"></img>
-      <img src="/images/home/spot3.png" id = "Lspot3"></img>
-      <img src="/images/home/spot4.png" id = "Lspot4"></img>
-      <img src="/images/home/spot1.png" id = "Rspot1"></img>
-      <img src="/images/home/spot2.png" id = "Rspot2"></img>
-      <img src="/images/home/spot3.png" id = "Rspot3"></img>
-      <img src="/images/home/spot4.png" id = "Rspot4"></img>
+      <img src="/images/home/background.png" id = "homeBackground" ontouchstart="return false;"></img>
+      <img src="/images/home/charact1.png" id ="homeC1" ontouchstart="return false;"></img>
+      <img src="/images/home/charact2.png" ontouchstart="return false;" id ="homeC2"></img>
+      <img src="/images/home/body.png" ontouchstart="return false;" id ="homeBody"></img>
+      <img src="/images/home/charact3.png" ontouchstart="return false;" id ="homeC3"></img>
+      <img src="/images/home/shadow.png" ontouchstart="return false;" id ="homeShadow"></img>
+      <img src="/images/home/light.png" ontouchstart="return false;" id = "homeLight"></img>
+      <img src="/images/home/tvlight.png" ontouchstart="return false;" id = "homeTvlight"></img>
+      <img src="/images/home/signal1.png" ontouchstart="return false;" id = "homeSignal1"></img>
+      <img src="/images/home/signal2.png" ontouchstart="return false;" id = "homeSignal2"></img>
+      <img src="/images/home/signal3.png" ontouchstart="return false;" id = "homeSignal3"></img>
+      <img src="/images/home/spot1.png" ontouchstart="return false;" id = "Lspot1"></img>
+      <img src="/images/home/spot2.png" ontouchstart="return false;" id = "Lspot2"></img>
+      <img src="/images/home/spot3.png" ontouchstart="return false;" id = "Lspot3"></img>
+      <img src="/images/home/spot4.png" ontouchstart="return false;" id = "Lspot4"></img>
+      <img src="/images/home/spot1.png" ontouchstart="return false;" id = "Rspot1"></img>
+      <img src="/images/home/spot2.png" ontouchstart="return false;" id = "Rspot2"></img>
+      <img src="/images/home/spot3.png" ontouchstart="return false;" id = "Rspot3"></img>
+      <img src="/images/home/spot4.png" ontouchstart="return false;" id = "Rspot4"></img>
       <button ontouchstart = "change_img()" ontouchend = "getIntoMain()" onclick="getIntoMain()" id ="home_bt_enter">
         <img src="/images/home/bt_enter.png" id = "img_enter"></img>
       </button>
     </div>
-    <!-- <div id="enterButton">
-      <button ontouchstart = "change_img()" ontouchend = "getIntoMain()" onclick="getIntoMain()">
-        <img src="/images/home/bt_enter.png" id = "img_enter"></img>
-      </button>
-    </div> -->
 
   </body>
   <script src="/javascripts/resLoader.js"></script>
   <script>
-  var loader = new resLoader({
-  	resources : [
-  		"test",
-  		"/images/1.png",
-  		"/images/2.png",
-  		"/images/3.png",
-  		"/images/4.png",
-  		"/images/5.png",
-  		"/images/6.png",
-  		"/images/bt_enter_clicked.png",
-  		"/images/home.png",
-      "/images/q1.png",
-      "/images/q1s1.png",
-      "/images/q1s1_c.png",
-      "/images/q1s2.png",
-      "/images/q1s2_c.png",
-      "/images/q1s3.png",
-      "/images/q1s3_c.png",
-      "/images/q2.png",
-      "/images/q2s1.png",
-      "/images/q2s1_c.png",
-      "/images/q2s2.png",
-      "/images/q2s2_c.png",
-      "/images/q2s3.png",
-      "/images/q2s3_c.png",
-      "/images/q3.png",
-      "/images/q3s1.png",
-      "/images/q3s1_c.png",
-      "/images/q3s2.png",
-      "/images/q3s2_c.png",
-      "/images/q3s3.png",
-      "/images/q3s3_c.png",
-      "/images/q4.png",
-      "/images/q4s1.png",
-      "/images/q4s1_c.png",
-      "/images/q4s2.png",
-      "/images/q4s2_c.png",
-      "/images/q4s3.png",
-      "/images/q4s3_c.png",
-      "/images/q5.png",
-      "/images/q5s1.png",
-      "/images/q5s1_c.png",
-      "/images/q5s2.png",
-      "/images/q5s2_c.png",
-      "/images/q5s3.png",
-      "/images/q5s3_c.png",
-      "/images/q6.png",
-      "/images/q6s1.png",
-      "/images/q6s1_c.png",
-      "/images/q6s2.png",
-      "/images/q6s2_c.png",
-      "/images/q6s3.png",
-      "/images/q6s3_c.png",
-      "/images/q7.png",
-      "/images/q7s1.png",
-      "/images/q7s1_c.png",
-      "/images/q7s2.png",
-      "/images/q7s2_c.png",
-      "/images/q7s3.png",
-      "/images/q7s3_c.png",
-      "/images/home/background.png",
-      "/images/home/body.png",
-      "/images/home/bt_enter.png",
-      "/images/home/bt_enter_c.png",
-      "/images/home/charact1.png",
-      "/images/home/charact2.png",
-      "/images/home/charact3.png",
-      "/images/home/light.png",
-      "/images/home/shadow.png",
-      "/images/home/signal1.png",
-      "/images/home/signal2.png",
-      "/images/home/signal3.png",
-      "/images/home/spot1.png",
-      "/images/home/spot2.png",
-      "/images/home/spot3.png",
-      "/images/home/spot4.png",
-      "/images/home/tvlight.png"
-  	],
-  	onStart : function(total){
-  		console.log('start:'+total);
-  	},
-  	onProgress : function(current, total){
-  		console.log(current+'/'+total);
-  		var percent = current/total;
-      var progress = document.getElementById("progress");
-      progress.value = percent;
-      if(current == total){
-        var load_div = document.getElementById("loadingDiv");
-        load_div.style.display = "none";
-      }
-  	},
-  	onComplete : function(total){
-  		// alert('加载完毕:'+total+'个资源');
-  	}
-  });
+    var loader = new resLoader({
+    	resources : [
+        "/images/question/q1.png",
+        "/images/question/q1s1.png",
+        "/images/question/q1s1_c.png",
+        "/images/question/q1s2.png",
+        "/images/question/q1s2_c.png",
+        "/images/question/q1s3.png",
+        "/images/question/q1s3_c.png",
+        "/images/question/q2.png",
+        "/images/question/q2s1.png",
+        "/images/question/q2s1_c.png",
+        "/images/question/q2s2.png",
+        "/images/question/q2s2_c.png",
+        "/images/question/q2s3.png",
+        "/images/question/q2s3_c.png",
+        "/images/question/q3.png",
+        "/images/question/q3s1.png",
+        "/images/question/q3s1_c.png",
+        "/images/question/q3s2.png",
+        "/images/question/q3s2_c.png",
+        "/images/question/q3s3.png",
+        "/images/question/q3s3_c.png",
+        "/images/question/q4.png",
+        "/images/question/q4s1.png",
+        "/images/question/q4s1_c.png",
+        "/images/question/q4s2.png",
+        "/images/question/q4s2_c.png",
+        "/images/question/q4s3.png",
+        "/images/question/q4s3_c.png",
+        "/images/question/q5.png",
+        "/images/question/q5s1.png",
+        "/images/question/q5s1_c.png",
+        "/images/question/q5s2.png",
+        "/images/question/q5s2_c.png",
+        "/images/question/q5s3.png",
+        "/images/question/q5s3_c.png",
+        "/images/question/q6.png",
+        "/images/question/q6s1.png",
+        "/images/question/q6s1_c.png",
+        "/images/question/q6s2.png",
+        "/images/question/q6s2_c.png",
+        "/images/question/q6s3.png",
+        "/images/question/q6s3_c.png",
+        "/images/question/q7.png",
+        "/images/question/q7s1.png",
+        "/images/question/q7s1_c.png",
+        "/images/question/q7s2.png",
+        "/images/question/q7s2_c.png",
+        "/images/question/q7s3.png",
+        "/images/question/q7s3_c.png",
+        "/images/home/background.png",
+        "/images/home/body.png",
+        "/images/home/bt_enter.png",
+        "/images/home/bt_enter_c.png",
+        "/images/home/charact1.png",
+        "/images/home/charact2.png",
+        "/images/home/charact3.png",
+        "/images/home/light.png",
+        "/images/home/shadow.png",
+        "/images/home/signal1.png",
+        "/images/home/signal2.png",
+        "/images/home/signal3.png",
+        "/images/home/spot1.png",
+        "/images/home/spot2.png",
+        "/images/home/spot3.png",
+        "/images/home/spot4.png",
+        "/images/home/tvlight.png",
+        "/images/answer/1.png",
+        "/images/answer/2.png",
+        "/images/answer/3.png",
+        "/images/answer/4.png",
+        "/images/answer/5.png",
+        "/images/answer/6.png",
+        "/images/answer/7.png",
+        "/images/answer/8.png",
+        "/images/answer/9.png",
+        "/images/answer/10.png",
+        "/images/answer/background.png",
+        "/images/answer/report1.png",
+        "/images/answer/report2.png",
+        "/images/answer/report3.png",
+        "/images/answer/report4.png",
+        "/images/mainInput/background.png",
+        "/images/mainInput/bt_back.png",
+        "/images/mainInput/bt_input.png",
+        "/images/mainInput/bt_input_c.png",
+        "/images/mainInput/bt_readyA.png",
+        "/images/mainInput/bt_readyB.png",
+        "/images/mainInput/bt_ready_c.png",
+        "/images/mainInput/city.png",
+        "/images/mainInput/input.png",
+        "/images/analysis/axis.png",
+        "/images/analysis/background.png",
+        "/images/analysis/cicleIn.png",
+        "/images/analysis/cicleOut.png",
+        "/images/analysis/cloud.png",
+        "/images/analysis/lens.png",
+        "/images/analysis/lenS1.png",
+        "/images/analysis/microScope.png",
+        "/images/analysis/plate.png",
+        "/images/analysis/squire.png",
+        "/images/analysis/starB.png",
+        "/images/analysis/starDB.png",
+        "/images/analysis/starO.png",
+        "/images/analysis/tube1.png",
+        "/images/analysis/tube2.png",
+        "/images/analysis/tube3.png",
+        "/images/analysis/tube4.png",
+        "/images/rest.png",
+        "/images/video_background.png",
+        "/images/loading.png"
+    	],
+    	onStart : function(total){
+    		console.log('start:'+total);
+    	},
+    	onProgress : function(current, total){
+    		console.log(current+'/'+total);
+    		var percent = current/total;
+        var progress = document.getElementById("progress");
+        progress.value = percent;
+        if(current == total){
+          var load_div = document.getElementById("loadingDiv");
+          load_div.style.display = "none";
+        }
+    	},
+    	onComplete : function(total){
+    	}
+    });
 
-  loader.start();
-
-  // function loading(){
-  //
-  // }
-  function getIntoMain(){
-
-    window.location.href='test';
-  }
-  function change_img(){
-    var img = document.getElementById("img_enter");;
-    img.src = "/images/home/bt_enter_c.png";
-  }
-
-
+    loader.start();
+    function getIntoMain(){
+      window.location.href='main';
+    }
+    function change_img(){
+      var img = document.getElementById("img_enter");;
+      img.src = "/images/home/bt_enter_c.png";
+    }
+    var html = document.querySelector('html');
+    function setPxPerRem(){
+        var dpr = 1;
+        var pxPerRem = document.documentElement.clientWidth * dpr / 10;
+        html.style.fontSize = pxPerRem + "px";
+        // alert(document.documentElement.clientWidth);
+    };
+    setPxPerRem();
   </script>
 
 

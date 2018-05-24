@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html id="html">
+  <head>
+    <meta charset="utf-8">
+    <meta content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" name="viewport" />
+    <link rel="stylesheet" href="/stylesheets/mySwiper.css" />
+    <link rel="stylesheet" href="/stylesheets/swiper/dist/css/swiper.min.css" />
+    <script src="/javascripts/polygonTrans.js"></script>
+    <script src="/javascripts/moveMotion.js"></script>
+
+    <title>空箱情报所</title>
+  </head>
+  <body style="background-color:rgb(200,200,200)" >
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper" >
+          <div class="swiper-slide" id="rest">
+            <div style="position:absolute;left:4.32rem;top:14.25rem;width:2rem;color:white">有一个秘密</div>
+          </div>
+          <div class="swiper-slide" data-swiper-parallax="-30%" id="videoDiv">
+           <video src="/images/video.mp4"
+           style="width:10rem;height:110%; object-fit: contain;overflow:hidden; z-index:-1" id="myVideo"
+           class="video"
+           autoplay="true"
+           controls="controls"
+           preload="auto"
+           playsinline="true"
+           x5-playsinline="true"
+           webkit-playsinline="true"
+           x-webkit-airplay="allow"
+           >
+           <source src="/images/video.mp4"></source>
+           s视频不显示</video>
+         </div>
+         <div class="swiper-slide" style="background-color:black">
+           <img id="inputBackground" src="/images/mainInput/background.png" ontouchstart="return false;"></img>
+           <div id="text">你已经足够了解我们</br>你准备好了解自己了吗？</div>
+           <div style="position:relative;top:4.51rem;display:none" id="cityBox">
+           <img id="city" src="/images/mainInput/city.png" ontouchstart="return false;">
+             <div style="position:absolute;top:6.79rem;left:3.15rem;width:3.81rem;">
+               <img id="btn_ready_c" src="/images/mainInput/bt_ready_c.png"></img>
+                <img id="btn_ready" src="/images/mainInput/bt_readyA.png" ontouchstart="showInput(true)" onclick="showInput(true)"></img>
+              </div>
+          </img>
+         </div>
+
+
+         <div id="mask" style="display:none;width:100%;height:100%;position:absolute;left:0;top:0;background-color:black;opacity:0.7;"></div>
+
+           <div id="input">
+             <img src="images/mainInput/bt_back.png" id="back" ontouchstart="showInput(false)"></img>
+             <img src="/images/mainInput/input.png" id="inputImg"></img>
+             <div id="codeText">请输入你的代号</div>
+            <form action="/question" method="post" style="z-index:9999;width:100%;height:100%;">
+              <input type="text" name = "name" id="nameInput"></input>
+              <input type="submit" value = "ok" id="submit"></input>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script>
+    var video = document.getElementById("myVideo");
+    var phoneType;
+    var phoneCode;
+    if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+      phoneType = "iPhone";
+      phoneCode = 1;
+      var rest = document.getElementById("rest");
+      rest.style.display = "none";
+
+    } else if (/(Android)/i.test(navigator.userAgent)) {
+      phoneType = "android";
+      phoneCode = 2;
+    } else {
+      phoneType = "pc";
+      phoneCode = 3;
+    };
+    document.addEventListener("WeixinJSBridgeReady", function () {
+      if(phoneType=="iPhone"){
+
+        video.play();
+      }
+
+      }, false);
+
+      video.addEventListener("ended",function(){
+        swiper.slideNext();
+        video.parentNode.removeChild(video);
+     });
+     var stopTwinkle = false;
+
+     function twinkle(switchBool){
+       if(stopTwinkle){
+         return;
+       }
+       var city = document.getElementById("btn_ready");
+       if(switchBool){
+         city.src="/images/mainInput/bt_readyB.png";
+       }else{
+         city.src="/images/mainInput/bt_readyA.png";
+       }
+       setTimeout(function () {
+         twinkle(!switchBool);
+       }, 200);
+     }
+
+    </script>
+
+    <script>
+       var html = document.querySelector('html');
+       function setPxPerRem(){
+           var dpr = 1;
+           var pxPerRem = document.documentElement.clientWidth * dpr / 10;
+           html.style.fontSize = pxPerRem + "px";
+       };
+       setPxPerRem();
+
+
+       function showOrHidden(show){
+         var input = document.getElementById("input");
+         if(show){
+           input.style.display = "block";
+         }else{
+           input.style.display = "none";
+         }
+       }
+
+       showOrHidden(false);
+
+       function showInput(isShow){
+         var mask = document.getElementById("mask");
+         var btn = document.getElementById("btn_ready");
+         if(isShow){
+           stopTwinkle = true;
+           mask.style.display = "block";
+           btn_ready.style.display = "none";
+           showOrHidden(true);
+         }else{
+           stopTwinkle = false;
+           mask.style.display = "none";
+           btn_ready.style.display = "block";
+           showOrHidden(false);
+           twinkle(true);
+         }
+
+       }
+     </script>
+
+    <!-- Swiper JS -->
+    <script src="/stylesheets/swiper/dist/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.swiper-container',{
+        direction : 'vertical',
+        on : {
+          init:function(){
+            // this.slideNext();
+          },
+          slideChange:function(){
+            if(phoneType=="android" && swiper.activeIndex==1){
+              video.play();
+              // alert("aaa");
+              swiper.allowTouchMove=false;
+            }
+            else
+            {
+              if (swiper.activeIndex==phoneCode) {
+                var city = document.getElementById("cityBox");
+                setTimeout(function () {
+                  city.style = "animation:city_anim 2s; position:relative;top:25.3%;";
+                }, 800);
+
+                twinkle(true);
+                var text = document.getElementById("text");
+                text.style = "animation:text_anim 3s;";
+            }
+          }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
