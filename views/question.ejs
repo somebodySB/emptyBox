@@ -197,9 +197,21 @@
         <img src="/images/analysis/cicleOut.png" id="cicleOut"></img>
         <img src="/images/analysis/cicleIn.png" id="cicleIn"></img>
         <img src="/images/analysis/tube1.png" id="tube1"></img>
+        <img src="/images/analysis/bubbleRedL.png" id="BRL"></img>
+        <img src="/images/analysis/bubbleRedS.png" id="BRS"></img>
+        <img src="/images/analysis/bubbleRedS.png" id="BRS2"></img>
         <img src="/images/analysis/tube2.png" id="tube2"></img>
+        <img src="/images/analysis/bubbleGreenL.png" id="BGL"></img>
+        <img src="/images/analysis/bubbleGreenS.png" id="BGS"></img>
+        <img src="/images/analysis/bubbleGreenS.png" id="BGS2"></img>
         <img src="/images/analysis/tube3.png" id="tube3"></img>
+        <img src="/images/analysis/bubbleVioletL.png" id="BVL"></img>
+        <img src="/images/analysis/bubbleVioletS.png" id="BVS"></img>
+        <img src="/images/analysis/bubbleVioletS.png" id="BVS2"></img>
         <img src="/images/analysis/tube4.png" id="tube4"></img>
+        <img src="/images/analysis/bubbleYellowL.png" id="BYL"></img>
+        <img src="/images/analysis/bubbleYellowS.png" id="BYS"></img>
+        <img src="/images/analysis/bubbleYellowS.png" id="BYS2"></img>
         <!-- <div id="squire"></div> -->
         </div>
 
@@ -313,9 +325,40 @@
            var tube4 = document.getElementById("tube4");
            tube4.className = "tubeAnim2";
 
-           setTimeout(function () {
-             submitQuestion();
-           }, 5000);
+           var brl = document.getElementById("BRL");
+           brl.className = "bubbleAnim2";
+           var brs = document.getElementById("BRS");
+           brs.className = "bubbleAnim1";
+
+           var brs2 = document.getElementById("BRS2");
+           brs2.className = "bubbleAnim3";
+
+           var bvl = document.getElementById("BVL");
+           bvl.className = "bubbleAnim3";
+           var bvs = document.getElementById("BVS");
+           bvs.className = "bubbleAnim1";
+
+           var bvs2 = document.getElementById("BVS2");
+           bvs2.className = "bubbleAnim2";
+
+           var bgl = document.getElementById("BGL");
+           bgl.className = "bubbleAnim5";
+           var bgs = document.getElementById("BGS");
+           bgs.className = "bubbleAnim4";
+
+           var bgs2 = document.getElementById("BGS2");
+           bgs2.className = "bubbleAnim6";
+
+           var byl = document.getElementById("BYL");
+           byl.className = "bubbleAnim6";
+           var bys = document.getElementById("BYS");
+           bys.className = "bubbleAnim4";
+
+           var bys2 = document.getElementById("BYS2");
+           bys2.className = "bubbleAnim5";
+           // setTimeout(function () {
+           //   submitQuestion();
+           // }, 5000);
          }
        },
      },
