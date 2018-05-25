@@ -63,6 +63,7 @@
 
 
     <script>
+
     var video = document.getElementById("myVideo");
     var phoneType;
     var phoneCode;
@@ -71,7 +72,6 @@
       phoneCode = 1;
       var rest = document.getElementById("rest");
       rest.style.display = "none";
-
     } else if (/(Android)/i.test(navigator.userAgent)) {
       phoneType = "android";
       phoneCode = 2;
@@ -81,7 +81,7 @@
     };
     document.addEventListener("WeixinJSBridgeReady", function () {
       if(phoneType=="iPhone"){
-
+        swiper.allowTouchMove=false;
         video.play();
       }
 
@@ -152,7 +152,6 @@
 
     <!-- Swiper JS -->
     <script src="/stylesheets/swiper/dist/js/swiper.min.js"></script>
-
     <!-- Initialize Swiper -->
     <script>
       var swiper = new Swiper('.swiper-container',{
@@ -183,6 +182,11 @@
           }
         }
       });
+
+      if(phoneType=="iPhone"){
+        swiper.allowTouchMove = false;
+      }
     </script>
+
   </body>
 </html>
