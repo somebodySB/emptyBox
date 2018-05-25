@@ -35,7 +35,7 @@
          </div>
          <div class="swiper-slide" style="background-color:black">
            <img id="inputBackground" src="/images/mainInput/background.png" ontouchstart="return false;"></img>
-           <div id="text">你已经足够了解我们</br>你准备好了解自己了吗？</div>
+           <div id="text">你已经了解我们</br></br>你准备好了解自己了吗？</div>
            <div style="position:relative;top:4.51rem;display:none" id="cityBox">
            <img id="city" src="/images/mainInput/city.png" ontouchstart="return false;">
              <div style="position:absolute;top:6.79rem;left:3.15rem;width:3.81rem;">
@@ -53,8 +53,8 @@
              <img src="/images/mainInput/input.png" id="inputImg"></img>
              <div id="codeText">请输入你的代号</div>
             <form action="/question" method="post" style="z-index:9999;width:100%;height:100%;">
-              <input type="text" name = "name" id="nameInput"></input>
-              <input type="submit" value = "ok" id="submit"></input>
+              <input type="text" name = "name" value="你的昵称" id="nameInput" onfocus="value = '';style.color = 'white';"></input>
+              <input type="submit" value = "OK" id="submit"></input>
             </form>
           </div>
         </div>
@@ -161,7 +161,7 @@
             if(phoneType=="android" && swiper.activeIndex==1){
               video.play();
               // alert("aaa");
-              swiper.allowTouchMove=false;
+              // swiper.allowTouchMove=false;
             }
             else
             {
@@ -181,7 +181,7 @@
       });
 
       if(phoneType=="iPhone"){
-        swiper.allowTouchMove = false;
+        // swiper.allowTouchMove = false;
       }
     </script>
 

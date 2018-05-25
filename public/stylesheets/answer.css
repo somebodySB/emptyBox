@@ -27,6 +27,8 @@
   width:3rem;
   color:white;
   font-size: .4rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
   text-align: left;
   font-family: "siyuan";
 }
@@ -38,6 +40,8 @@
   width:1.07rem;
   color:white;
   font-size: .4rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
   text-align: left;
   font-family: "siyuan";
 }
@@ -56,6 +60,8 @@
   width:3rem;
   color:white;
   font-size: .4rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
   text-align: left;
   font-family: "siyuan";
 }
@@ -67,6 +73,8 @@
   width:1.07rem;
   color:white;
   font-size: .4rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
   text-align: left;
   font-family: "siyuan";
 }
@@ -85,6 +93,8 @@
   width:3rem;
   color:white;
   font-size: .4rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
   text-align: left;
   font-family: "siyuan";
 }
@@ -96,6 +106,8 @@
   width:1.07rem;
   color:white;
   font-size: .4rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
   text-align: left;
   font-family: "siyuan";
 }
@@ -104,9 +116,11 @@
   position: absolute;
   text-align: center;
   color:white;
-  top:8.95rem;
+  top:8.84rem;
   left:1rem;
   width:6.73rem;
+  height: 0.7rem;
+  line-height: 0.7rem;
   font-size: .4rem;
   font-family: "siyuan";
 }
@@ -123,11 +137,13 @@
 #nameText{
   position: absolute;
   right:.85rem;
-  top:1.7rem;
+  top:1.65rem;
   width:3rem;
   height:.56rem;
   color:white;
   font-size: .48rem;
+  height: 0.7rem;
+  line-height: 0.7rem;
   text-align: right;
   font-family: "siyuan";
 }
@@ -135,11 +151,13 @@
 #date{
   position: absolute;
   left:3.19rem;
-  top:1.04rem;
+  top:1.12rem;
   width:1.41rem;
   height:.26rem;
   color:white;
   font-size: .29rem;
+  height: 0.29rem;
+  line-height: 0.29rem;
   text-align: center;
   font-family: "siyuan";
 }
@@ -157,10 +175,12 @@
 #inviteDate{
   position: absolute;
   left:4.39rem;
-  top:10.64rem;
+  top:10.53rem;
   width:3.2rem;
   color:white;
   font-size: .29rem;
+  height: 0.29rem;
+  line-height: 0.29rem;
   text-align: center;
   font-family: "siyuan";
 }
@@ -168,10 +188,12 @@
 #inviteAddress{
   position: absolute;
   left:4.39rem;
-  top:10.94rem;
+  top:10.98rem;
   width:3.2rem;
   color:white;
   font-size: .29rem;
+  height: 0.29rem;
+  line-height: 0.29rem;
   text-align: center;
   font-family: "siyuan";
 }

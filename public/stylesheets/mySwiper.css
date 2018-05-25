@@ -39,12 +39,14 @@ to {transform: translate(0,0);}
 
 #text{
   position: absolute;
-  left: 3.61rem;
-  top:2.65rem;
-  width:4.29rem;
+  left: 2.89rem;
+  top:2rem;
+  width:4.5rem;
   height: 1.15rem;
   color: #31fff0;
-  font-size: .33rem;
+  font-size: .4rem;
+  text-align: center;
+  font-weight: bold;
   font-family: "siyuan";
 }
 
@@ -91,6 +93,8 @@ to {transform: translate(0,0);}
   border-radius: 4px;
   border-color: #31fff0;
   color:#31fff0;
+  font-size: .43rem;
+  font-weight: bold;
 }
 
 #nameInput{
@@ -100,20 +104,22 @@ to {transform: translate(0,0);}
   width: 4.01rem;
   height: 1.01rem;
   background-color: black;
-  color:white;
+  color:#b2b2b2;
   border:1px solid;
   border-radius: 4px;
   border-color: #31fff0;
-  font-size: 25px;
+  font-size: .4rem;
   text-align: center;
 }
 
+
 #codeText{
   position: absolute;
-  left:2.8rem;
+  left:2.64rem;
   top:1.07rem;
   width:3.07rem;
-  font-size: .33rem;
+  font-size: .43rem;
+  font-weight: bold;
   color:white;
   font-family: "siyuan";
 }
