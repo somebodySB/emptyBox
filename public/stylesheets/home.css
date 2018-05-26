@@ -88,6 +88,15 @@ to {transform: translate3d(0,10px,0);}
   animation-direction: alternate;
 }
 
+#homeLight2{
+  position: absolute;
+  left: 3.56rem;
+  top:7.65rem;
+  width: 1.87rem;
+  animation: light infinite 0.5s;
+  animation-direction: alternate;
+}
+
 @keyframes light {
   from {opacity: 1;}
   to{opacity: 0.5;}
